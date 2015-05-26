@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Engr.Geometry.Datums;
 
 namespace Engr.Geometry.Primatives
 {
@@ -6,5 +7,7 @@ namespace Engr.Geometry.Primatives
     {
         IReadOnlyList<IVertex> Vertices { get; }
         IReadOnlyList<ILineSegment> Edges { get; }
+
+        Plane Plane { get; }
     }
 }
