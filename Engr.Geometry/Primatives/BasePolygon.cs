@@ -7,19 +7,19 @@ namespace Engr.Geometry.Primatives
     public abstract class BasePolygon : IPolygon
     {
 
-        public IReadOnlyList<IVertex> Vertices { get; protected set; }
+        public IReadOnlyList<Point> Points { get; protected set; }
         public IReadOnlyList<ILineSegment> Edges { get; protected set; }
         public Plane Plane
         {
             get
             {
-                return Plane.FromPoints(Vertices[0].Position, Vertices[1].Position, Vertices[2].Position);
+                return Plane.FromPoints(Points[0], Points[1], Points[2]);
             }
         }
 
-        protected BasePolygon(IList<IVertex> vertices, IList<ILineSegment> edges)
+        protected BasePolygon(IList<Point> points, IList<ILineSegment> edges)
         {
-            Vertices = new ReadOnlyCollection<IVertex>(vertices);
+            Points = new ReadOnlyCollection<Point>(points);
             Edges = new ReadOnlyCollection<ILineSegment>(edges);
         }
     }

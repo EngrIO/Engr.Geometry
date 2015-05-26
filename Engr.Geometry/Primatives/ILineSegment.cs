@@ -2,7 +2,7 @@
 {
     public interface ILineSegment
     {
-        IVertex Start { get; }
-        IVertex End { get; }
+        Point Start { get; }
+        Point End { get; }
     }
 }

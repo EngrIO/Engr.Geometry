@@ -4,18 +4,18 @@ namespace Engr.Geometry.Primatives
 {
     public class LineSegment : ILineSegment
     {
-        public IVertex Start { get; private set; }
-        public IVertex End { get; private set; }
+        public Point Start { get; private set; }
+        public Point End { get; private set; }
 
-        public Func<float, IVertex> Equation
+        public Func<float, Point> Equation
         {
             get
             {
-                return d => new Vertex(Start.Position.Lerp(End.Position, d),Start.Normal.Lerp(End.Normal, d));
+                return d => new Point(Start.Lerp(End, d));
             }
         }
 
-        public LineSegment(IVertex start, IVertex end)
+        public LineSegment(Point start, Point end)
         {
             Start = start;
             End = end;

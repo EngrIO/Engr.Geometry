@@ -4,9 +4,9 @@ namespace Engr.Geometry.Primatives
 {
     public interface ITriangle:IPolygon
     {
-        IVertex V1 { get; }
-        IVertex V2 { get; }
-        IVertex V3 { get; }
+        Point Point1 { get; }
+        Point Point2 { get; }
+        Point Point3 { get; }
         Vect3f Normal { get; }
     }
 }

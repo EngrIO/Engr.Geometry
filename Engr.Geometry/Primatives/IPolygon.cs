@@ -5,7 +5,7 @@ namespace Engr.Geometry.Primatives
 {
     public interface IPolygon
     {
-        IReadOnlyList<IVertex> Vertices { get; }
+        IReadOnlyList<Point> Points { get; }
         IReadOnlyList<ILineSegment> Edges { get; }
 
         Plane Plane { get; }
