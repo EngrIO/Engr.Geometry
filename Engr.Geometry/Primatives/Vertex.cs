@@ -1,8 +1,8 @@
 ﻿using Engr.Maths.Vectors;
 
-namespace Engr.Geometry
+namespace Engr.Geometry.Primatives
 {
-    public class Vertex
+    public class Vertex:IVertex
     {
         public Vect3f Position { get; private set; }
         public Vect3f Normal { get; private set; }
@@ -18,4 +18,6 @@ namespace Engr.Geometry
             return new Vertex(Position, -Normal);
         }
     }
+
+
 }

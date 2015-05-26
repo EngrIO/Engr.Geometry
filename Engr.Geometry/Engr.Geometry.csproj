@@ -43,7 +43,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datums\Plane.cs" />
-    <Compile Include="Vertex.cs" />
+    <Compile Include="Primatives\BasePolygon.cs" />
+    <Compile Include="Primatives\ILineSegment.cs" />
+    <Compile Include="Primatives\IPolygon.cs" />
+    <Compile Include="Primatives\ITriangle.cs" />
+    <Compile Include="Primatives\IVertex.cs" />
+    <Compile Include="Primatives\LineSegment.cs" />
+    <Compile Include="Primatives\Triangle.cs" />
+    <Compile Include="Primatives\Vertex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
