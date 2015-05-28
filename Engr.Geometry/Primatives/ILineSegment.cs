@@ -1,4 +1,6 @@
-﻿namespace Engr.Geometry.Primatives
+﻿using Engr.Geometry.Datums;
+
+namespace Engr.Geometry.Primatives
 {
     public interface ILineSegment
     {

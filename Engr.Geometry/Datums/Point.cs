@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Engr.Maths.Vectors;
 
-namespace Engr.Geometry.Primatives
+namespace Engr.Geometry.Datums
 {
     public class Point : Vect3f
     {
