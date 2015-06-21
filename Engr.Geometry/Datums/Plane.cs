@@ -17,7 +17,7 @@ namespace Engr.Geometry.Datums
 
         public static Plane FromPoints(Vect3f a, Vect3f b, Vect3f c)
         {
-            var n = (b - a).CrossProduct(c - a).Normalized();
+            var n = (b - a).CrossProduct(c - a).Normalize();
             return new Plane(n, n.DotProduct(a));
         }
 
@@ -31,7 +31,7 @@ namespace Engr.Geometry.Datums
         public static Plane FromEquation(float a, float b, float c, float d)
         {
             var l = new Vect3f(a, b, c).Length;
-            return new Plane(new Vect3f(a/l,b/l,c/l).Normalized(), d/l);
+            return new Plane(new Vect3f(a/l,b/l,c/l).Normalize(), d/l);
         }
 
         public float DistanceTo(Point p)
@@ -50,7 +50,7 @@ namespace Engr.Geometry.Datums
         }
         public Plane Normalize()
         {
-            return new Plane(Normal.Normalized(), Constant / Normal.Length);
+            return new Plane(Normal.Normalize(), Constant / Normal.Length);
         }
     }
 }
