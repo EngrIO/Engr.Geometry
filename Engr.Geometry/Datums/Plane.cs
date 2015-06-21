@@ -21,6 +21,13 @@ namespace Engr.Geometry.Datums
             return new Plane(n, n.DotProduct(a));
         }
 
+
+        public static Plane FromPoints(params Vect3f [] points)
+        {
+            if(points.Length < 3) throw new ArgumentException();
+            return FromPoints(points[0], points[1], points[2]);
+        }
+
         public static Plane FromEquation(float a, float b, float c, float d)
         {
             var l = new Vect3f(a, b, c).Length;

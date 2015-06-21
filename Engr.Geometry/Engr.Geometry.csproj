@@ -52,6 +52,7 @@
     <Compile Include="Primatives\IVertex.cs" />
     <Compile Include="Primatives\LineSegment.cs" />
     <Compile Include="Datums\Point.cs" />
+    <Compile Include="Shapes\Circle.cs" />
     <Compile Include="Shapes\ISphere.cs" />
     <Compile Include="Shapes\Sphere.cs" />
     <Compile Include="Shapes\Triangle.cs" />

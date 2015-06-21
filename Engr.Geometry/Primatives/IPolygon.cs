@@ -9,5 +9,6 @@ namespace Engr.Geometry.Primatives
         IReadOnlyList<ILineSegment> Edges { get; }
 
         Plane Plane { get; }
+
     }
 }
