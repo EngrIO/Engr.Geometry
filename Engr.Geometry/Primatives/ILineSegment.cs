@@ -1,10 +1,11 @@
 ﻿using Engr.Geometry.Datums;
+using Engr.Maths.Vectors;
 
 namespace Engr.Geometry.Primatives
 {
     public interface ILineSegment
     {
-        Point Start { get; }
-        Point End { get; }
+        Vect3 Start { get; }
+        Vect3 End { get; }
     }
 }

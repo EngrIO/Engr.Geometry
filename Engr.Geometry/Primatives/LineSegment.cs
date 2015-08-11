@@ -1,22 +1,23 @@
 ﻿using System;
 using Engr.Geometry.Datums;
+using Engr.Maths.Vectors;
 
 namespace Engr.Geometry.Primatives
 {
     public class LineSegment : ILineSegment
     {
-        public Point Start { get; private set; }
-        public Point End { get; private set; }
+        public Vect3 Start { get; private set; }
+        public Vect3 End { get; private set; }
 
-        public Func<float, Point> Equation
+        public Func<float, Vect3> Equation
         {
             get
             {
-                return d => new Point(Start.Lerp(End, d));
+                return d => Start.Lerp(End, d);
             }
         }
 
-        public LineSegment(Point start, Point end)
+        public LineSegment(Vect3 start, Vect3 end)
         {
             Start = start;
             End = end;

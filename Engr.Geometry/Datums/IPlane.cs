@@ -4,7 +4,7 @@ namespace Engr.Geometry.Datums
 {
     public interface IPlane
     {
-        Vect3f Normal { get; }
-        float Constant { get; }
+        Vect3 Normal { get; }
+        double Constant { get; }
     }
 }

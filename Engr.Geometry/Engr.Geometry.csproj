@@ -32,7 +32,7 @@
   <ItemGroup>
     <Reference Include="Engr.Maths, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Engr.Maths.1.0.0-CI00010\lib\net45\Engr.Maths.dll</HintPath>
+      <HintPath>..\packages\Engr.Maths.1.0.0-CI00013\lib\net45\Engr.Maths.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,13 +46,16 @@
     <Compile Include="Datums\IPlane.cs" />
     <Compile Include="Datums\Plane.cs" />
     <Compile Include="Extensions.cs" />
+    <Compile Include="Intersections\Vect3Intersections.cs" />
+    <Compile Include="Intersections\TriangleInteresctions.cs" />
+    <Compile Include="Primatives\AABB.cs" />
     <Compile Include="Primatives\BasePolygon.cs" />
+    <Compile Include="Primatives\IAABB.cs" />
     <Compile Include="Primatives\ILineSegment.cs" />
     <Compile Include="Primatives\IPolygon.cs" />
     <Compile Include="Primatives\ITriangle.cs" />
     <Compile Include="Primatives\IVertex.cs" />
     <Compile Include="Primatives\LineSegment.cs" />
-    <Compile Include="Datums\Point.cs" />
     <Compile Include="Shapes\Circle.cs" />
     <Compile Include="Shapes\ISphere.cs" />
     <Compile Include="Shapes\Sphere.cs" />

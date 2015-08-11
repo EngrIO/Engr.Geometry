@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace Engr.Geometry.Shapes
 {
-    public class Circle
+    public class Circle : ICircle
     {
+        //TODO
+        public static ICircle FromPoints()
+        {
+            return null;
+        }
+    }
 
+    public interface ICircle
+    {
+        //Ve
     }
 }

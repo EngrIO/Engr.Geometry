@@ -1,10 +1,11 @@
 using Engr.Geometry.Datums;
+using Engr.Maths.Vectors;
 
 namespace Engr.Geometry.Shapes
 {
     public interface ISphere
     {
-        Point Center { get; }
+        Vect3 Center { get; }
         float Radius { get; }
     }
 }
