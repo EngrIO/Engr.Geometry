@@ -8,7 +8,7 @@ namespace Engr.Geometry.Intersections
 {
     public static class TriangleInteresctions
     {
-        public static bool Intersects(this ITriangle tri, AABB aabb)
+        public static bool Intersects(this ITriangle tri, IAABB aabb)
         {
             var v0 = tri.Point1 - aabb.Center;
             var v1 = tri.Point2 - aabb.Center;
