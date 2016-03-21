@@ -9,7 +9,7 @@ namespace Engr.Geometry.Primatives
 {
     public class Polygon : BasePolygon
     {
-        protected Polygon(IEnumerable<Vect3> points) : base(points.ToList())
+        public Polygon(IEnumerable<Vect3> points) : base(points.ToList())
         {
 
         }
