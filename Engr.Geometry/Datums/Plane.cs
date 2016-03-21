@@ -51,5 +51,10 @@ namespace Engr.Geometry.Datums
         {
             return new Plane(Normal.Normalize(), Constant / Normal.Length);
         }
+
+        public IPlane Flipped()
+        {
+            return new Plane(Normal * -1.0, Constant * -1.0);
+        }
     }
 }

@@ -6,5 +6,6 @@ namespace Engr.Geometry.Datums
     {
         Vect3 Normal { get; }
         double Constant { get; }
+        IPlane Flipped();
     }
 }
