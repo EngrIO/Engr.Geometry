@@ -1,4 +1,5 @@
-﻿using Engr.Geometry.Datums;
+﻿using System;
+using Engr.Geometry.Datums;
 using Engr.Geometry.Primatives;
 using Engr.Maths.Vectors;
 
@@ -33,6 +34,11 @@ namespace Engr.Geometry.Shapes
             var v = point3 - point1;
             return u.CrossProduct(v);
 
+        }
+
+        public override IPolygon Flipped()
+        {
+            return new Triangle(Point3, Point2, Point1);
         }
     }
 }

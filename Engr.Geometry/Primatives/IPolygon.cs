@@ -9,5 +9,6 @@ namespace Engr.Geometry.Primatives
         IReadOnlyList<Vect3> Points { get; }
         IReadOnlyList<ILineSegment> Edges { get; }
         Plane Plane { get; }
+        IPolygon Flipped();
     }
 }

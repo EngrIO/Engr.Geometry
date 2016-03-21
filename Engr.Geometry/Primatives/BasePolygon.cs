@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Engr.Geometry.Datums;
@@ -30,12 +31,13 @@ namespace Engr.Geometry.Primatives
         protected BasePolygon(IList<Vect3> points)
         {
             Points = new ReadOnlyCollection<Vect3>(points);
-
             var edges = new List<ILineSegment>(points.Zip(points.Skip(1), (a, b) => new LineSegment(a, b)))
             {
                 new LineSegment(points.Last(), points.First())
             };
             Edges = new ReadOnlyCollection<ILineSegment>(edges);
         }
+
+        public abstract IPolygon Flipped();
     }
 }
