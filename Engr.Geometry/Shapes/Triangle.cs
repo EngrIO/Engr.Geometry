@@ -17,9 +17,9 @@ namespace Engr.Geometry.Shapes
             : base(new[] { point1, point2, point3 }, new[] { new LineSegment(point1, point2), new LineSegment(point2, point3), new LineSegment(point3, point1)})
         {
             Point1 = point1;
-            Normal = normal;
-            Point3 = point3;
             Point2 = point2;
+            Point3 = point3;
+            Normal = normal;
         }
 
         public Triangle(Vect3 point1, Vect3 point2, Vect3 point3)
@@ -40,5 +40,15 @@ namespace Engr.Geometry.Shapes
         {
             return new Triangle(Point3, Point2, Point1);
         }
+
+        public Vect3 Centroid()
+        {
+            return (Point1 + Point2 + Point3) / 3.0;
+        }
+        public Vect3 Circumcenter()
+        {
+            return Circle.FromPoints(Point1, Point2, Point3).Center;
+        }
+
     }
 }
